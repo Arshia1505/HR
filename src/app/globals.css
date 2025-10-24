@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.bg-custom {
+  background-image: url('/pixel.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-color: black; /* optional */
+}
