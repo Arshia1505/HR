@@ -219,6 +219,16 @@ async function handleLoginSuccess(userData) {
           {loading ? 'Logging in…' : 'Login'}
         </button>
       </form>
+
+       <p className="text-center mt-4 text-black text-lg">
+          No profile?{' '}
+          <a
+            href="/register"
+            className="text-sky-600 hover:underline"
+          >
+            Sign up
+          </a>
+        </p>
     </div>
 
     {/* Optional custom fonts */}
