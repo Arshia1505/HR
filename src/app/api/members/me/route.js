@@ -13,7 +13,7 @@ export async function GET(req) {
     const member = await Member.findById(authResult.id).lean();
     if (!member) return new Response(JSON.stringify({ error: 'Member not found' }), { status: 404 });
 
-    const { password, ...safe } = member;
+    const {  ...safe } = member;
     return new Response(JSON.stringify({ member: safe }), { status: 200 });
   } catch (err) {
     console.error('GET /api/members/me error', err);
@@ -43,7 +43,7 @@ export async function PATCH(req) {
 
     if (!updated) return new Response(JSON.stringify({ error: 'Member not found' }), { status: 404 });
 
-    const { password, ...safe } = updated;
+    const { ...safe } = updated;
     return new Response(JSON.stringify({ member: safe }), { status: 200 });
   } catch (err) {
     console.error('PATCH /api/members/me error', err);

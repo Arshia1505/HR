@@ -12,7 +12,7 @@ export async function authenticate(req, res, allowedRoles = []) {
       return new Response(JSON.stringify({ error: 'Forbidden: Insufficient role' }), { status: 403 });
     }
     return decoded; // return user info
-  } catch (err) {
+  } catch {
     return new Response(JSON.stringify({ error: 'Invalid token' }), { status: 401 });
   }
 }
