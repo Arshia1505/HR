@@ -1,4 +1,3 @@
-// src/app/api/auth/register/route.js
 import connect from '@/lib/mongoose';
 import Member from '@/models/Member';
 import bcrypt from 'bcrypt';
